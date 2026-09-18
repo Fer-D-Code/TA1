@@ -1,0 +1,80 @@
+Algoritmo OrtoedroDiagonalVolumen
+	Definir a, b, c, D, V Como Real
+	Escribir "Ingrese a (largo): "
+	Leer a
+	Escribir "Ingrese b (ancho): "
+	Leer b
+	Escribir "Ingrese c (alto): "
+	Leer c
+
+	D <- RC(a*a + b*b + c^2)
+	V <- a*b*c
+
+	Escribir "Diagonal: ", D, " y Volumen: ", V
+FinAlgoritmo
+
+
+import java.util.Scanner;
+
+public class OrtoedroDiagonalVolumen {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Ingrese a (largo): ");
+        double a = sc.nextDouble();
+        System.out.print("Ingrese b (ancho): ");
+        double b = sc.nextDouble();
+        System.out.print("Ingrese c (alto): ");
+        double c = sc.nextDouble();
+
+        double D = Math.sqrt(a * a + b * b + Math.pow(c, 2));
+        double V = a * b * c;
+
+        System.out.println("Diagonal: " + D + " y Volumen: " + V);
+
+        sc.close();
+    }
+}
+
+
+
+Algoritmo DistanciaEntrePuntos
+	Definir x1, y1, x2, y2, d Como Real
+	Escribir "Ingrese x1: "
+	Leer x1
+	Escribir "Ingrese y1: "
+	Leer y1
+	Escribir "Ingrese x2: "
+	Leer x2
+	Escribir "Ingrese y2: "
+	Leer y2
+
+	d <- RC((x2 - x1)^2 + (y2 - y1)^2)
+
+	Escribir "La distancia entre P1 y P2 es: ", d
+FinAlgoritmo
+
+
+
+
+
+import java.util.Scanner;
+
+public class DistanciaEntrePuntos {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Ingrese x1: ");
+        double x1 = sc.nextDouble();
+        System.out.print("Ingrese y1: ");
+        double y1 = sc.nextDouble();
+        System.out.print("Ingrese x2: ");
+        double x2 = sc.nextDouble();
+        System.out.print("Ingrese y2: ");
+        double y2 = sc.nextDouble();
+
+        double d = Math.sqrt(Math.pow(x2 - x1, 2) + Math.pow(y2 - y1, 2));
+
+        System.out.println("La distancia entre P1 y P2 es: " + d);
+
+        sc.close();
+    }
+}
